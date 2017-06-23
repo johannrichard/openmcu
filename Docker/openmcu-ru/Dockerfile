@@ -4,7 +4,7 @@ FROM phusion/baseimage:0.9.18
 ENV PREFIX="/opt"
 
 # Install (witha resounding "YES" :-))
-RUN add-apt-repository ppa:rayanayar/openmcu-ru && \
+RUN add-apt-repository -y ppa:rayanayar/openmcu-ru && \
     apt-get update && \
     apt-get install -y openmcu-ru
 
