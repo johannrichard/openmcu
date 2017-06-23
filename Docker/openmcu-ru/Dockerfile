@@ -13,5 +13,6 @@ EXPOSE 5060 5061 1420 1554 1720
 
 # TODO: Add volumes for data / config
 # HERE
+
 # Run that thing
-CMD ["/opt/openmcu-ru/bin/openmcu-ru"]
+CMD ["/usr/bin/openmcu-ru -x"]
