@@ -12,11 +12,17 @@ RUN add-apt-repository -y ppa:rayanayar/openmcu-ru && \
 EXPOSE 5060 5061 1420 1554 1720
 
 # TODO: Add volumes for data / config
-# HERE
+VOLUME ["/etc/openmcu-ru/"] 
+VOLUME ["/var/lib/openmcu-ru/"]
+VOLUME ["/var/log/openmcu-ru/"]
+
+# Configuration
+ADD src/openmcu-ru.default /etc/default/openmcu-ru
 
 # Run that thing
 RUN mkdir /etc/service/openmcud
 ADD src/openmcud.sh /etc/service/openmcud/run
+
 # RUN chmod +x /etc/service/openmcud/run
 
 # Use baseimage-docker's init system.
