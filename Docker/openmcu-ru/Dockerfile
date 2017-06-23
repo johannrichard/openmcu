@@ -1,8 +1,6 @@
+# Based on "Trusty" (14.04) baseimage
 FROM phusion/baseimage:0.9.18
 
-# Install dependencies
-
-ENV MAKE_OPTS="-j 3"
 ENV PREFIX="/opt"
 
 RUN add-apt-repository ppa:rayanayar/openmcu-ru && \
